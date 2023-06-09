@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoGames 🎮</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
+            font-family: monospace;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        button {
+            display: flex;
+            margin: 20px auto;
+            border: 1px solid plum;
+            background-color: white;
+            font-size: 20px;
+            border-radius: 6px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+        }
+
+        button:hover {
+            background-color: plum;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        footer a:visited {
+            color: inherit;
+        }
+
+        .themeButton {
+            font-size: 15px;
+            background: black;
+            color: white;
+            padding: 5 8px;
+        }
+
+        .themeButton:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .videogamePhoto {
+            border-radius: 10px;
+            transition: opacity 150ms ease-in-out;
+        }
+
+        .videogamePhoto:hover {
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+
+        .grid {
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .grid img:hover {
+            transform: scale(2);
+        }
+
+        .dark {
+            background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+            color: white;
+        }
+
+        .dark .container {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark a {
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button class="themeButton">Change Theme</button>
+    <div class="container">
+        <h1>VideoGames 🎮 </h1>
+        <h2>My favorite hobby</h2>
+        <a href="https://en.wikipedia.org/wiki/Video_game">
+            <img src="https://media.wired.com/photos/62feb60bcea7c0581e825cb0/master/pass/Fate-of-Game-Preservation-Games-GettyImages-1170073827.jpg"
+                class="videogamePhoto" />
+        </a>
+        <div class="grid">
+            <img src="https://www.napratica.org.br/wp-content/uploads/2017/07/destaque-videogame.jpeg" />
+            <img
+                src="https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/ym9ntmdjckmfdmtfmasr/video-games?fimg-ssr-default" />
+            <img src="https://www.cartacapital.com.br/wp-content/uploads/2019/04/iStock-10362044362.jpg" />
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFbxuh3sYv1PHtpvsjOsOLnR_qStUk316-aQxPSweXxcR7OV5cbjMSKJcZ9lra1KdI2Mo&usqp=CAU" />
+        </div>
+        <p>
+            A video game, also known as a computer game, is an electronic game that involves interaction with a user
+            interface or input device such as a joystick, controller, keyboard, or motion sensing device to generate
+            audiovisual feedback. This feedback is most commonly shown on a video display device, such as a TV set,
+            monitor,
+            touchscreen, or virtual reality headset. Some computer games do not always depend on a graphics display; for
+            example, text adventure games and computer chess can be played through teletype printers. Video games are
+            often
+            augmented with audio feedback delivered through speakers or headphones, and sometimes with other types of
+            feedback, including haptic technology.
+        </p>
+
+        <button>Play VideoGames</button>
+    </div>
+    <footer>
+        Coded by <a href="https://www.linkedin.com/in/sofia-americano/">Sofia Americano</a>
+    </footer>
+
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+
+            body.classList.toggle("dark");
+        }
+
+        let themeButton = document.querySelector(".themeButton");
+        themeButton.addEventListener("click", changeTheme);
+    </script>
+</body>
+
+</html>
